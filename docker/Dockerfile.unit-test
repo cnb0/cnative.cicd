@@ -1,0 +1,6 @@
+FROM golang:1.10
+
+ADD . /go/src/github.com/cnb0/cnative.cicd
+WORKDIR /go/src/github.com/cnb0/cnative.cicd
+
+RUN go test ./... -v -tags=unit

@@ -1,0 +1,7 @@
+replicaCount: 10
+
+image:
+  repository: registry.github.com/cnb0/cnative.cicd
+  tag: latest
+
+database: ""

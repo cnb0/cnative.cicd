@@ -1,0 +1,6 @@
+FROM  golangci/golangci-lint
+
+ADD . /go/src/github.com/cnb0/cnative.cicd
+WORKDIR /go/src/github.com/cnb0/cnative.cicd
+
+RUN golangci-lint run ./...
