@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    image: somkiat/app:1.1.1
+    ports:
+      - "4000:4000"
+  mongo:
+    image: mongo:4.2.8
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=mydb
+
+
+# docker-compose build // Build image
+# docker-compose up // Foreground process
+# docker-compose up -d // Background process
+# docker-compose ps // List of containers
+# docker-compose logs web // View log of web service
+# docker-compose down // Remove all resources (container, network, volume)
+
+# 1. Fork
+# 2. Create file docker-compose.yml
+# 3. PR
+# 4. Push to Docker Hub
